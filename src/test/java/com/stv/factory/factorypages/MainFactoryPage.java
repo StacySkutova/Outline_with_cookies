@@ -18,6 +18,13 @@ public class MainFactoryPage extends FactoryPage {
     @FindBy(xpath = "//button[@id='qa-dual-register']")
     private WebElement newCustomerButton;
 
+    // for new cucumber test (created find+click method)
+    @FindBy(css = "div a#forgotten-password")
+    private WebElement forgottenYourPassword;
+    public void clickForgottenYourPassword() {
+        forgottenYourPassword.click();
+    }
+
 
     //my test
     public void clickNewCustomerButton() {
