@@ -10,21 +10,18 @@ public class MainFactoryTest extends BasicFactoryTest {
 
     MainFactoryPage mainFactoryPage = new MainFactoryPage();
 
-
-
-    @Test (description = "Assert the main page is loaded and account icon is visible")
+    @Test(description = "Assert the main page is loaded and account icon is visible")
     public void assertAccountIconIsDisplayed() {
-        boolean actualResult = mainFactoryPage .isAccountLinkDisplayed();
+        boolean actualResult = mainFactoryPage.isAccountLinkDisplayed();
         Assert.assertEquals(actualResult, true, "Account link isn't visible");
     }
 
-    @Test (description = "Assert the login page is loaded", dependsOnMethods = "assertAccountIconIsDisplayed")
+    @Test(description = "Assert the login page is loaded", dependsOnMethods = "assertAccountIconIsDisplayed")
     public void assertLoginPageOpened() {
         mainFactoryPage.clickOnTrustButton();
         mainFactoryPage.clickOnAccountLink();
         Assert.assertEquals(new LoginPage().isLoginContainerDisplayed(), true, "Login page isn't loaded properly");
     }
-
 
 
 }

@@ -19,6 +19,7 @@ public class BddTest extends BasicFactoryTest {
         getDriver().manage().window().maximize();
         mainFactoryPage.clickForgottenYourPassword();
         myResetPasswordPage.isResetPasswordContainerDisplayed();
-        Assert.assertEquals(new MyResetPasswordPage().isResetPasswordContainerDisplayed(), true, " page isn't loaded properly");
+        Assert.assertEquals(new MyResetPasswordPage().isResetPasswordContainerDisplayed(),
+                true, " page isn't loaded properly");
     }
 }
