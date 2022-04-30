@@ -1,6 +1,5 @@
 package com.stv.factory.factorytests;
 
-import bdd_framework.steps.RecoveryPage;
 import com.stv.factory.factorypages.MainFactoryPage;
 import com.stv.factory.factorypages.MyResetPasswordPage;
 import com.stv.factory.factorypages.NewUserPage;
