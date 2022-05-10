@@ -4,13 +4,14 @@ package com.stv.bdd_framework.steps;
 import com.stv.design.designtests.BasicTest;
 import com.stv.factory.factorypages.MainFactoryPage;
 import com.stv.factory.factorypages.MyResetPasswordPage;
+import com.stv.factory.factorytests.BasicFactoryTest;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import java.util.concurrent.TimeUnit;
 
-public class RecoveryPage extends BasicTest {
+public class RecoveryPageStep extends BasicFactoryTest {
 //    MyResetPasswordPage myResetPasswordPage = new MyResetPasswordPage();
 //    MainFactoryPage mainFactoryPage = new MainFactoryPage();
 

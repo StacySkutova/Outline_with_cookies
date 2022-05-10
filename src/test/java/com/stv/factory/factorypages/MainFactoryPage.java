@@ -21,6 +21,7 @@ public class MainFactoryPage extends FactoryPage {
     // for new cucumber test (created find+click method)
     @FindBy(css = "div a#forgotten-password")
     private WebElement forgottenYourPassword;
+
     public void clickForgottenYourPassword() {
         forgottenYourPassword.click();
     }
