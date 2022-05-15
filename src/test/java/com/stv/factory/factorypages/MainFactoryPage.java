@@ -26,6 +26,60 @@ public class MainFactoryPage extends FactoryPage {
         forgottenYourPassword.click();
     }
 
+    //// cucumber 2 test!!!!!!!!!!
+
+    //button[@class="truste-button4"]
+    //reject cookies
+    @FindBy(xpath = "//button[@class=\"truste-button4\"]")
+    private WebElement rejectCookies;
+
+    public void pressRejectCookies() {
+        rejectCookies.click();
+    }
+
+    // flag icon US
+    @FindBy(xpath = "//span[@class='flag flag-US']")
+//    @FindBy(xpath = "//a[@href='/internationaloptions/update?returnUrl=%2F']")
+//    @FindBy(xpath = "//a [@class=\"bem-header__language-selector\"]")
+//    @FindBy(xpath = "//li [@class=\"bem-header__list-item\"][3]")
+    private WebElement language_selector_US;
+
+    public void pressUSFlagIcon() {
+        language_selector_US.click();
+    }
+
+    //    @FindBy(xpath = "//select/option[.='United Kingdom']")
+    @FindBy(xpath = "//select/option[.='United Kingdom']")
+    private WebElement deliveryDestinationUK;
+
+    public void chooseDestinationUK() {
+        deliveryDestinationUK.click();
+    }
+
+//update ButtonClick
+    @FindBy(xpath = "//button[@type=\"submit\"]")
+    private WebElement updateButton;
+
+    public void clickUpdateButton() {
+        updateButton.click();
+    }
+
+
+
+
+    @FindBy(xpath = "//select[@class='bem-language-selector__control'][@id='countryId']")
+    private WebElement delivery_destination_selector;
+
+    //select[@class='bem-language-selector__control'][@id='countryId'][@text='']
+    //button[@type="submit"]
+    //select/option[.='United Kingdom']
+    //select/option[.='USA']
+    //button[@class="bem-language-selector__button"]
+    //span[@class='flag flag-GB']
+    //span[contains(text(),'$')]
+    //span[@class="bem-mini-basket__summary-amount"][contains(text(),'$')]
+    //span[@class="bem-mini-basket__summary-amount"][contains(text(),'£')]
+
 
     //my test
     public void clickNewCustomerButton() {
