@@ -42,5 +42,11 @@ public class CheckUSandUKRegion extends BasicFactoryTest {
     public void clickUpdateButton() {
         new MainFactoryPage().clickUpdateButton();
     }
+
+    @And("^check UK flag$")
+    public void checkUKFlag() {
+        new MainFactoryPage().checkUKFlag();
+    }
+
 }
 

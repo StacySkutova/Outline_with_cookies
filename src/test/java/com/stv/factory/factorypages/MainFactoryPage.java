@@ -64,6 +64,13 @@ public class MainFactoryPage extends FactoryPage {
         updateButton.click();
     }
 
+    //check UKFlag
+    @FindBy(xpath = "//span[@class='flag flag-GB']")
+    private WebElement UKFlag;
+
+    public void checkUKFlag() {
+        UKFlag.isDisplayed();
+    }
 
 
 
@@ -76,6 +83,7 @@ public class MainFactoryPage extends FactoryPage {
     //select/option[.='USA']
     //button[@class="bem-language-selector__button"]
     //span[@class='flag flag-GB']
+    //span[@class='flag flag-US']
     //span[contains(text(),'$')]
     //span[@class="bem-mini-basket__summary-amount"][contains(text(),'$')]
     //span[@class="bem-mini-basket__summary-amount"][contains(text(),'£')]
