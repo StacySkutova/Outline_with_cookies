@@ -3,6 +3,7 @@ package com.stv.factory.factorypages;
 import com.stv.factory.factorytests.BasicFactoryTest;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 public class CheckUSandUKRegion extends BasicFactoryTest {
     public static final String START_URL = "https://www.wiggle.com/";
-//    public static final String POINT_URL = "https://www.wiggle.co.uk/secure/myaccount/RecoverPassword?email=";
+
 
     @Given("^the main page is loaded$")
     public void setup() {
@@ -46,6 +47,26 @@ public class CheckUSandUKRegion extends BasicFactoryTest {
     @And("^check UK flag$")
     public void checkUKFlag() {
         new MainFactoryPage().checkUKFlag();
+    }
+
+    @Then("^flag click UK$")
+    public void pressUKFlagIcon() {
+        new MainFactoryPage().pressUKFlagIcon();
+    }
+
+    @And("^choose destination US$")
+    public void chooseDestinationUS() {
+        new MainFactoryPage().chooseDestinationUS();
+    }
+
+    @And("^check US flag$")
+    public void checkUSFlag() {
+        new MainFactoryPage().checkUSFlag();
+    }
+
+    @And("^check US dollars icon in cart$")
+    public void checkUSDollarsInCart() {
+        new MainFactoryPage().checkUSDollarsInCart();
     }
 
 }

@@ -8,7 +8,8 @@ Feature: Region check for wiggle.com
     And choose destination UK
     And choose update click
     And check UK flag
-    Then choose destination US
+    Then flag click UK
+    And choose destination US
     And choose update click
     And check US flag
     And check US dollars icon in cart
