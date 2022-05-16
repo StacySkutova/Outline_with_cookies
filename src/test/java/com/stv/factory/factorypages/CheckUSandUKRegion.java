@@ -26,45 +26,46 @@ public class CheckUSandUKRegion extends BasicFactoryTest {
     }
 
 
-    @When("^flag click$")
+    @When("^the user click on US flag icon$")
     public void pressUSFlagIcon() {
+        //reject cookies to download page
         new MainFactoryPage().pressRejectCookies();
         new MainFactoryPage().pressUSFlagIcon();
 //        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     }
 
-    @And("^choose destination UK$")
+    @And("^choose destination to UK$")
     public void chooseDestinationUK() {
         new MainFactoryPage().chooseDestinationUK();
     }
 
-    @And("^choose update click$")
+    @And("^click update button$")
     public void clickUpdateButton() {
         new MainFactoryPage().clickUpdateButton();
     }
 
-    @And("^check UK flag$")
+    @And("^check the US flag has bean changed to UK flag$")
     public void checkUKFlag() {
         new MainFactoryPage().checkUKFlag();
     }
 
-    @Then("^flag click UK$")
+    @Then("^click UK flag$")
     public void pressUKFlagIcon() {
         new MainFactoryPage().pressUKFlagIcon();
     }
 
-    @And("^choose destination US$")
+    @And("^choose destination to US$")
     public void chooseDestinationUS() {
         new MainFactoryPage().chooseDestinationUS();
     }
 
-    @And("^check US flag$")
+    @And("^check the UK flag has bean changed to US flag$")
     public void checkUSFlag() {
         new MainFactoryPage().checkUSFlag();
     }
 
-    @And("^check US dollars icon in cart$")
+    @And("^check US dollars icon in the cart$")
     public void checkUSDollarsInCart() {
         new MainFactoryPage().checkUSDollarsInCart();
     }

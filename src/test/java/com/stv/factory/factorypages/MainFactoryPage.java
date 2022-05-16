@@ -26,23 +26,20 @@ public class MainFactoryPage extends FactoryPage {
         forgottenYourPassword.click();
     }
 
+
     //// cucumber 2 test!!!!!!!!!!///////////
 
-    //button[@class="truste-button4"]
-    //reject cookies
+    
     @FindBy(xpath = "//button[@class=\"truste-button4\"]")
     private WebElement rejectCookies;
+
     public void pressRejectCookies() {
         rejectCookies.click();
     }
 
     // flag icon US
     @FindBy(xpath = "//span[@class='flag flag-US']")
-//    @FindBy(xpath = "//a[@href='/internationaloptions/update?returnUrl=%2F']")
-//    @FindBy(xpath = "//a [@class=\"bem-header__language-selector\"]")
-//    @FindBy(xpath = "//li [@class=\"bem-header__list-item\"][3]")
     private WebElement language_selector_US;
-
     public void pressUSFlagIcon() {
         language_selector_US.click();
     }
@@ -50,7 +47,6 @@ public class MainFactoryPage extends FactoryPage {
     //    @FindBy(xpath = "//select/option[.='United Kingdom']")
     @FindBy(xpath = "//select/option[.='United Kingdom']")
     private WebElement deliveryDestinationUK;
-
     public void chooseDestinationUK() {
         deliveryDestinationUK.click();
     }
@@ -66,6 +62,7 @@ public class MainFactoryPage extends FactoryPage {
     //check UKFlag
     @FindBy(xpath = "//span[@class='flag flag-GB']")
     private WebElement UKFlag;
+
     public void checkUKFlag() {
         UKFlag.isDisplayed();
     }
@@ -73,7 +70,6 @@ public class MainFactoryPage extends FactoryPage {
     //choose destination US
     @FindBy(xpath = "//span[@class='flag flag-GB']")
     private WebElement language_selector_UK;
-
     public void pressUKFlagIcon() {
         language_selector_UK.click();
     }
@@ -87,6 +83,7 @@ public class MainFactoryPage extends FactoryPage {
     //check USFlag
     @FindBy(xpath = "//span[@class='flag flag-US']")
     private WebElement USFlag;
+
     public void checkUSFlag() {
         USFlag.isDisplayed();
     }
@@ -99,10 +96,10 @@ public class MainFactoryPage extends FactoryPage {
     }
 
 
-
-
-    @FindBy(xpath = "//select[@class='bem-language-selector__control'][@id='countryId']")
-    private WebElement delivery_destination_selector;
+    
+    
+//    @FindBy(xpath = "//select[@class='bem-language-selector__control'][@id='countryId']")
+//    private WebElement delivery_destination_selector;
 
     //select[@class='bem-language-selector__control'][@id='countryId'][@text='']
     //button[@type="submit"]
@@ -114,7 +111,11 @@ public class MainFactoryPage extends FactoryPage {
     //span[contains(text(),'$')]
     //span[@class="bem-mini-basket__summary-amount"][contains(text(),'$')]
     //span[@class="bem-mini-basket__summary-amount"][contains(text(),'£')]
-
+//    @FindBy(xpath = "//a[@href='/internationaloptions/update?returnUrl=%2F']")
+//    @FindBy(xpath = "//a [@class=\"bem-header__language-selector\"]")
+//    @FindBy(xpath = "//li [@class=\"bem-header__list-item\"][3]")
+    //button[@class="truste-button4"]
+    //reject cookies
 
     //my test
     public void clickNewCustomerButton() {
