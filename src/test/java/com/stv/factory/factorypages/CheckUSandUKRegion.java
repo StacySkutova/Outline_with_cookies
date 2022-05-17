@@ -27,47 +27,55 @@ public class CheckUSandUKRegion extends BasicFactoryTest {
 
 
     @When("^the user click on US flag icon$")
-    public void pressUSFlagIcon() {
+    public void pressUSFlagIcon() throws InterruptedException {
         //reject cookies to download page
         new MainFactoryPage().pressRejectCookies();
         new MainFactoryPage().pressUSFlagIcon();
+        Thread.sleep(2000);
 //        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     }
 
     @And("^choose destination to UK$")
-    public void chooseDestinationUK() {
+    public void chooseDestinationUK() throws InterruptedException {
         new MainFactoryPage().chooseDestinationUK();
+        Thread.sleep(2000);
     }
 
     @And("^click update button$")
-    public void clickUpdateButton() {
+    public void clickUpdateButton() throws InterruptedException {
         new MainFactoryPage().clickUpdateButton();
+        Thread.sleep(2000);
     }
 
     @And("^check the US flag has bean changed to UK flag$")
-    public void checkUKFlag() {
+    public void checkUKFlag() throws InterruptedException {
         new MainFactoryPage().checkUKFlag();
+        Thread.sleep(2000);
     }
 
     @Then("^click UK flag$")
-    public void pressUKFlagIcon() {
+    public void pressUKFlagIcon() throws InterruptedException {
         new MainFactoryPage().pressUKFlagIcon();
+        Thread.sleep(2000);
     }
 
     @And("^choose destination to US$")
-    public void chooseDestinationUS() {
+    public void chooseDestinationUS() throws InterruptedException {
         new MainFactoryPage().chooseDestinationUS();
+        Thread.sleep(2000);
     }
 
     @And("^check the UK flag has bean changed to US flag$")
-    public void checkUSFlag() {
+    public void checkUSFlag() throws InterruptedException {
         new MainFactoryPage().checkUSFlag();
+        Thread.sleep(2000);
     }
 
     @And("^check US dollars icon in the cart$")
-    public void checkUSDollarsInCart() {
+    public void checkUSDollarsInCart() throws InterruptedException {
         new MainFactoryPage().checkUSDollarsInCart();
+        Thread.sleep(2000);
     }
 
 }

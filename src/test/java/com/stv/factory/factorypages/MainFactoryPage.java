@@ -67,13 +67,14 @@ public class MainFactoryPage extends FactoryPage {
         UKFlag.isDisplayed();
     }
 
-    //choose destination US
+    //choose destination UK
     @FindBy(xpath = "//span[@class='flag flag-GB']")
     private WebElement language_selector_UK;
     public void pressUKFlagIcon() {
         language_selector_UK.click();
     }
 
+    //choose destination US
     @FindBy(xpath = "//select/option[.='USA']")
     private WebElement deliveryDestinationUS;
     public void chooseDestinationUS() {
@@ -88,7 +89,7 @@ public class MainFactoryPage extends FactoryPage {
         USFlag.isDisplayed();
     }
 
-    //check USFlag
+    //check USDollar
     @FindBy(xpath = "//span[@class=\"bem-mini-basket__summary-amount\"][contains(text(),'$')]")
     private WebElement USDollar;
     public void checkUSDollarsInCart() {
