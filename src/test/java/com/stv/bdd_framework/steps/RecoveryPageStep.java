@@ -30,7 +30,7 @@ public class RecoveryPageStep extends BasicFactoryTest {
         new MainFactoryPage().clickForgottenYourPassword();
     }
 
-    @Then("^the user goes to the reset password page$")
+    @Then("^the user goes to the \"Reset password page\"$")
     public void goesToResetMyPasswordPage() {
         getDriver().manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 //        new MyResetPasswordPage().isResetPasswordContainerDisplayed();

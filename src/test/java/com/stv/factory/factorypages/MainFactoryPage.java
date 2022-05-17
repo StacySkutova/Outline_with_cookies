@@ -1,5 +1,7 @@
 package com.stv.factory.factorypages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -84,7 +86,6 @@ public class MainFactoryPage extends FactoryPage {
     //check USFlag
     @FindBy(xpath = "//span[@class='flag flag-US']")
     private WebElement USFlag;
-
     public void checkUSFlag() {
         USFlag.isDisplayed();
     }
@@ -95,10 +96,38 @@ public class MainFactoryPage extends FactoryPage {
     public void checkUSDollarsInCart() {
         USDollar.isDisplayed();
     }
+///////////////// OUTLINE Scenario
+
+    @FindBy(xpath = "//a[@id=\"accountLink\"]")
+    private WebElement yourAccountLink;
+    public void yourAccountLinkClick() {
+        yourAccountLink.click();
+    }
+
+    @FindBy(xpath = "//button[@id=\"qa-login\"]")
+    private WebElement signInSecurelyButton;
+    public void signInSecurelyButtonClick() {
+        signInSecurelyButton.click();
+    }
+
+    @FindBy(xpath = "//input[@class=\"bem-forms__form-control js-username\"]")
+    private WebElement emailField;
+    public void emailFieldSenKeys(String email) {
+        emailField.sendKeys();
+    }
+    @FindBy(xpath = "//input[@class=\"bem-forms__form-control js-password\"]")
+    private WebElement passwordField;
+    public void passwordFieldSenKeys(String password) {
+        passwordField.sendKeys();
+    }
+
+//    WebDriver driver = null;
+//        driver.findElement(By.xpath("//input[@class=\"bem-forms__form-control js-username\"]")).sendKeys(arg1);
+//        driver.findElement(By.xpath("//input[@class=\"bem-forms__form-control js-password\"]")).sendKeys(arg2);
+
+    //button[@id="qa-login"]
 
 
-    
-    
 //    @FindBy(xpath = "//select[@class='bem-language-selector__control'][@id='countryId']")
 //    private WebElement delivery_destination_selector;
 
