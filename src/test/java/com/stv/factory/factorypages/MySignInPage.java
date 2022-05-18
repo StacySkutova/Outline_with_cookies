@@ -10,4 +10,11 @@ public class MySignInPage extends FactoryPage{
     public boolean isSignInPageContainerDisplayed() {
         return signInPageContainer.isDisplayed();
     }
+    @FindBy(xpath = "//button[@id=\"qa-login\"]")
+    private WebElement signInSecurely;
+
+    public void clickSignInSecurelyButtonClick() {
+        signInSecurely.click();
+    }
+
 }

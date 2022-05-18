@@ -1,4 +1,4 @@
-package com.stv.factory.factorypages;
+package com.stv.bdd_framework.steps;
 
 import com.stv.factory.factorypages.MainFactoryPage;
 import com.stv.factory.factorytests.BasicFactoryTest;
@@ -6,16 +6,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 
-import javax.swing.*;
 import java.util.concurrent.TimeUnit;
 
-public class CheckUSandUKRegion extends BasicFactoryTest {
+public class CheckUSandUKRegionSteps extends BasicFactoryTest {
     public static final String START_URL = "https://www.wiggle.com/";
 
 

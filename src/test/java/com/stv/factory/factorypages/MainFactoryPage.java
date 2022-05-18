@@ -42,7 +42,9 @@ public class MainFactoryPage extends FactoryPage {
     }
 
     public void pressRejectCookies() {
-        rejectCookies.click();
+        if(rejectCookies.isDisplayed()==true){
+        rejectCookies.click();}
+        else return;
     }
 
     // flag icon US
