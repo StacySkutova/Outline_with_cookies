@@ -1,6 +1,9 @@
 package com.stv.factory.factorypages;
 
 import com.stv.factory.factorypages.FactoryPage;
+import com.stv.factory.factorypages.MainFactoryPage;
+import com.stv.factory.factorypages.MySignInPage;
+import com.stv.factory.factorypages.NewCustomerPage;
 import com.stv.factory.factorytests.BasicFactoryTest;
 import com.stv.framework.core.drivers.Driver;
 import io.cucumber.java.en.And;
@@ -16,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 public class OutlineTest extends BasicFactoryTest {
     public static final String START_URL = "https://www.wiggle.com/";
+//    public static final String START_URL = "https://www.wiggle.com/secure/myaccount/logon?returnUrl=%2Fsecure%2Faccount";
     WebDriver driver = null;
 
     @Given("^the Wiggle main page is loaded$")
@@ -27,7 +31,10 @@ public class OutlineTest extends BasicFactoryTest {
 
     @When("^the user clicks on the Your account link$")
     public void theUserClicksOnTheYourAccountLink() {
-        new MainFactoryPage().pressRejectCookies();
+        if (new MainFactoryPage().ifRejectCookiesIsExist()){
+            new MainFactoryPage().pressRejectCookies();
+        }
+//        new MainFactoryPage().pressRejectCookies();
         new MainFactoryPage().yourAccountLinkClick();
     }
 
@@ -38,6 +45,21 @@ public class OutlineTest extends BasicFactoryTest {
         Assert.assertEquals(new MySignInPage().isSignInPageContainerDisplayed(),
                 true, " page isn't loaded properly");
     }
+
+
+        @And("the user enter Email Address as {string} and Password as {string}")
+    public void theUserEnterEmailAddressAsAndPasswordAs(String arg1, String arg2) throws InterruptedException {
+        //        new MainFactoryPage().emailFieldSenKeys(arg1);
+//        new MainFactoryPage().passwordFieldSenKeys(arg2);
+//        driver.findElement(By.xpath("//input[@class=\"bem-forms__form-control js-username\"]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@class=\"bem-forms__form-control js-username\"]")).sendKeys(arg1);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@class=\"bem-forms__form-control js-password\"]")).sendKeys(arg2);
+        Thread.sleep(2000);
+        //        driver.findElement(By.xpath("//button[@id=\"qa-login\"]")).click();
+    }
+
 
 
     @And("^click Sign in securely$")
@@ -51,19 +73,6 @@ public class OutlineTest extends BasicFactoryTest {
         getDriver().manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         Assert.assertEquals(new NewCustomerPage().isNewCustomerPageContainerDisplayed(),
                 true, " page isn't loaded properly");
-    }
-
-    @And("the user enter Email Address as {string} and Password as {string}")
-    public void theUserEnterUsernameAsAndPasswordAs(String arg1, String arg2) throws InterruptedException {
-//        new MainFactoryPage().emailFieldSenKeys(arg1);
-//        new MainFactoryPage().passwordFieldSenKeys(arg2);
-//        driver.findElement(By.xpath("//input[@class=\"bem-forms__form-control js-username\"]")).click();
-        driver.findElement(By.xpath("//input[@class=\"bem-forms__form-control js-username\"]")).sendKeys(arg1);
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@class=\"bem-forms__form-control js-password\"]")).sendKeys(arg2);
-        Thread.sleep(2000);
-//        driver.findElement(By.xpath("//button[@id=\"qa-login\"]")).click();
-
     }
 
 

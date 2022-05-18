@@ -31,9 +31,15 @@ public class MainFactoryPage extends FactoryPage {
 
     //// cucumber 2 test!!!!!!!!!!///////////
 
-    
+
     @FindBy(xpath = "//button[@class=\"truste-button4\"]")
     private WebElement rejectCookies;
+
+    public boolean ifRejectCookiesIsExist() {
+        if (rejectCookies.isDisplayed()) {
+            return rejectCookies.isDisplayed();
+        } else return false;
+    }
 
     public void pressRejectCookies() {
         rejectCookies.click();
@@ -42,6 +48,7 @@ public class MainFactoryPage extends FactoryPage {
     // flag icon US
     @FindBy(xpath = "//span[@class='flag flag-US']")
     private WebElement language_selector_US;
+
     public void pressUSFlagIcon() {
         language_selector_US.click();
     }
@@ -49,6 +56,7 @@ public class MainFactoryPage extends FactoryPage {
     //    @FindBy(xpath = "//select/option[.='United Kingdom']")
     @FindBy(xpath = "//select/option[.='United Kingdom']")
     private WebElement deliveryDestinationUK;
+
     public void chooseDestinationUK() {
         deliveryDestinationUK.click();
     }
@@ -72,6 +80,7 @@ public class MainFactoryPage extends FactoryPage {
     //choose destination UK
     @FindBy(xpath = "//span[@class='flag flag-GB']")
     private WebElement language_selector_UK;
+
     public void pressUKFlagIcon() {
         language_selector_UK.click();
     }
@@ -79,6 +88,7 @@ public class MainFactoryPage extends FactoryPage {
     //choose destination US
     @FindBy(xpath = "//select/option[.='USA']")
     private WebElement deliveryDestinationUS;
+
     public void chooseDestinationUS() {
         deliveryDestinationUS.click();
     }
@@ -86,6 +96,7 @@ public class MainFactoryPage extends FactoryPage {
     //check USFlag
     @FindBy(xpath = "//span[@class='flag flag-US']")
     private WebElement USFlag;
+
     public void checkUSFlag() {
         USFlag.isDisplayed();
     }
@@ -93,6 +104,7 @@ public class MainFactoryPage extends FactoryPage {
     //check USDollar
     @FindBy(xpath = "//span[@class=\"bem-mini-basket__summary-amount\"][contains(text(),'$')]")
     private WebElement USDollar;
+
     public void checkUSDollarsInCart() {
         USDollar.isDisplayed();
     }
@@ -100,23 +112,28 @@ public class MainFactoryPage extends FactoryPage {
 
     @FindBy(xpath = "//a[@id=\"accountLink\"]")
     private WebElement yourAccountLink;
+
     public void yourAccountLinkClick() {
         yourAccountLink.click();
     }
 
     @FindBy(xpath = "//button[@id=\"qa-login\"]")
     private WebElement signInSecurelyButton;
+
     public void signInSecurelyButtonClick() {
         signInSecurelyButton.click();
     }
 
     @FindBy(xpath = "//input[@class=\"bem-forms__form-control js-username\"]")
     private WebElement emailField;
+
     public void emailFieldSenKeys(String email) {
         emailField.sendKeys();
     }
+
     @FindBy(xpath = "//input[@class=\"bem-forms__form-control js-password\"]")
     private WebElement passwordField;
+
     public void passwordFieldSenKeys(String password) {
         passwordField.sendKeys();
     }

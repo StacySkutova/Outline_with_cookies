@@ -5,10 +5,10 @@ Feature: Email and Password validation
     Given the Wiggle main page is loaded
     When the user clicks on the Your account link
     Then the user goes to the Sign In page
-    And the user enter Email Address as "<email address>" and Password as "<password>"
+    And the user enter Email Address as "<email>" and Password as "<password>"
     And click Sign in securely
     Then the user goes to New customer page
     Examples:
-      | email address | password |
+      | email  | password |
       | test@test.com | asasasasa |
       | fest@fest.com | asasasasas |
