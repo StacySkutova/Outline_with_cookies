@@ -26,6 +26,4 @@ public class BasicFactoryTest {
     public void afterClass() throws Exception {
         getDriver().quit();
     }
-
-
 }
